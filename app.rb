@@ -23,6 +23,7 @@ post '/visit' do
 	f = File.open "./public/user.txt", "a"
 	f.write "Barber: #{@barbers}\nName: #{@user_name}. Number phone: #{@phone}.Date and time visit #{@time_visit}\n"
 	f.close
+	erb "Здравствуйте #{@user_name}! Вы записаны к #{@barbers} на #{@time_visit}"
 end
 
 get '/contacts' do
