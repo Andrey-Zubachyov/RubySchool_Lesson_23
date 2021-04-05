@@ -1,0 +1,28 @@
+<h2>Записаться</h2>
+<p>На этой странице Вы можете записатьмя к нам в Barber shop</p>
+<form action="/visit" method="POST">
+	<div>
+		<label>Выберите парикмахера</label>
+		<select name="barbers">
+			<option value="Walter White">Walter White</option>
+			<option value="Jessie Pinkman">Jessie Pinkman</option>
+			<option value="Gus Fring">Gus Fring</option>
+		</select>
+	</div>
+	<div class="mb-3">
+    	<label>Ваше имя</label>
+    	<input name="user_name" type="text" class="form-control" placeholder="Введите Ваше имя">
+	</div>
+    	<div class="mb-3">
+    	<label>Ваш номер телефона</label>
+    	<input name="phone" type="text" class="form-control" placeholder="Введите номер Вашего телефона">
+	</div>
+	<div class="mb-3">
+    	<label>Время записи</label>
+    	<input name="time_visit" type="datetime" class="form-control" placeholder="Введите дату и вермя записи">
+	</div>
+	<br>
+	<button type="submit" class="btn btn-primary">Записаться</button>
+</form>
+
+
