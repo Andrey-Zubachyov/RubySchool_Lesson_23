@@ -20,10 +20,11 @@ post '/visit' do
 	@user_name	= params[:user_name]
 	@phone		= params[:phone]	
 	@time_visit	= params[:time_visit]
+	@color		= params[:color]
 	f = File.open "./public/user.txt", "a"
-	f.write "Barber: #{@barbers}\nName: #{@user_name}. Number phone: #{@phone}.Date and time visit #{@time_visit}\n"
+	f.write "Barber: #{@barbers}\nName: #{@user_name}. Number phone: #{@phone}.Date and time visit #{@time_visit} color hair #{@color}\n"
 	f.close
-	erb "Здравствуйте #{@user_name}! Вы записаны к #{@barbers} на #{@time_visit}"
+	erb "Здравствуйте #{@user_name}! Вы записаны к #{@barbers} на #{@time_visit} Выбранный Вами цвет окраски: #{@color}"
 end
 
 get '/contacts' do
